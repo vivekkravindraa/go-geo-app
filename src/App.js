@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
-import GoogleMaps from './components/GoogleMaps';
+import Maps from './components/Maps';
+import GeoLocation from './components/GeoLocation';
 import MapAutoComplete from './components/MapAutoComplete';
 import Polygon from './components/Polygon';
 import Standalone from './components/Standalone';
@@ -15,12 +16,13 @@ export default function App() {
   return (
     <Router history={customHistory}>
       <Switch>
-        <Route path="/shelters" component={ShelterMap} />
-        <Route path="/searchbox" component={MapWithASearchBox} />
-        <Route path="/standalone" component={Standalone} />
-        <Route path="/polygon" component={Polygon} />
-        <Route path="/autocomplete" component={MapAutoComplete} />
-        <Route path="/" component={GoogleMaps} />
+        <Route exact path="/shelters" component={() => <Maps mapToRender={<ShelterMap />} />} />
+        <Route exact path="/searchbox" component={() => <Maps mapToRender={<MapWithASearchBox />} />} />
+        <Route exact path="/standalone" component={() => <Maps mapToRender={<Standalone />} />} />
+        <Route exact path="/polygon" component={() => <Maps mapToRender={<Polygon />} />} />
+        <Route exact path="/autocomplete" component={() => <Maps mapToRender={<MapAutoComplete />} />} />
+        <Route exact path="/geolocation" component={() => <Maps mapToRender={<GeoLocation />} />} />
+        <Route exact path="/" component={Maps} />
       </Switch>
     </Router>
   )

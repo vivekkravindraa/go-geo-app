@@ -33,7 +33,7 @@ const MapWithAMarker = compose(withScriptjs, withGoogleMap)(props => {
     )
 })
 
-export default class GoogleMaps extends Component {
+export default class GeoLocation extends Component {
     constructor(props) {
         super(props)
         this.state = {
