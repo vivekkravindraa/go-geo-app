@@ -15,6 +15,15 @@
     text-transform: uppercase;
 }
 
+.mapsHeader > p > a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.mapsHeader > p > a:hover {
+    color: #ffffff;
+}
+
 .mapsLinks {
     display: flex;
     justify-content: center;

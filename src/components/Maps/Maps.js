@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import './Maps.css';
 
-export default function Maps({mapToRender}) {
+export default function Maps({ mapToRender }) {
 
     const paths = [
         { "title": "Geo Location", "pathName": "/geolocation" },
@@ -16,14 +16,14 @@ export default function Maps({mapToRender}) {
 
     return <div className="mapsContainer">
         <div className="mapsHeader">
-            <p>Maps</p>
+            <p><NavLink to="/">GOOGLE MAPS</NavLink></p>
         </div>
         <div className="mapsLinks">
             {paths.map((path, index) => {
                 return (
                     <div key={index}>
                         <NavLink to={`${path.pathName}`}>
-                            <i className={path.icon}></i>{path.title.toUpperCase()}
+                            {path.title.toUpperCase()}
                         </NavLink>
                     </div>
                 )
