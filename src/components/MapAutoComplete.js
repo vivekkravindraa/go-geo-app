@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { GoogleMap, LoadScript, Marker, Autocomplete, InfoWindow } from '@react-google-maps/api';
 import logo from '../logo.svg';
 
-const mapContainerStyle = { height: "600px", width: "600px" };
+const mapContainerStyle = { height: "100vh", width: "100vw" };
 
 const center = { lat: 12, lng: 77 };
 

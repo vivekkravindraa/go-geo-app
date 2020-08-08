@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
-const mapContainerStyle = { height: "600px", width: "600px" };
+const mapContainerStyle = { height: "100vh", width: "100vw" };
 
 const center = { lat: 24.886, lng: -70.268 };
 
