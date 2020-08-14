@@ -11,7 +11,8 @@ export default function Maps({ mapToRender }) {
         { "title": "Polygon", "pathName": "/polygon" },
         { "title": "Standalone", "pathName": "/standalone" },
         { "title": "Map With A Search Box", "pathName": "/searchbox" },
-        { "title": "Shelter Map", "pathName": "/shelters" }
+        { "title": "Shelter Map", "pathName": "/shelters" },
+        { "title": "Polyline", "pathName": "/polyline" }
     ];
 
     return <div className="mapsContainer">
